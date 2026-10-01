@@ -375,6 +375,11 @@ img{max-width:100%}
             <button class="btn" type="button" id="adminRefresh">MUAT SEMULA</button>
             <button class="btn ghost" type="button" id="adminLogout">KUNCI</button>
           </div>
+          <div class="btn-row">
+            <button class="btn" type="button" id="dlCsv">MUAT TURUN EXCEL</button>
+            <button class="btn ghost" type="button" id="dlTxt">MUAT TURUN TEKS</button>
+          </div>
+          <p class="admin-meta" id="dlMsg"></p>
           <div class="wish-list" id="adminList"></div>
         </div>
       </section>
@@ -649,6 +654,7 @@ async function adminLoad() {
     $("#cBelum").textContent = d.counts["Belum pasti"] || 0;
     $("#cJumlah").textContent = d.total || 0;
     $("#adminUpdated").textContent = "Dikemas kini " + fmtFull(Date.now());
+    adminData = d.wishes || [];
     renderList($("#adminList"), d.wishes || [], true, "Belum ada ucapan.");
   } catch (e) { m.textContent = "Tidak dapat memuatkan data. Semak sambungan internet."; }
 }
@@ -661,6 +667,46 @@ $("#adminLock").addEventListener("submit", ev => {
   adminLoad();
 });
 $("#adminRefresh").addEventListener("click", adminLoad);
+/* download all wishes */
+var adminData = [];
+function stamp() { const d = new Date(); return d.getFullYear() + pad(d.getMonth() + 1) + pad(d.getDate()); }
+function saveFile(name, text, type) {
+  const blob = new Blob([text], { type: type });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = name; document.body.appendChild(a); a.click();
+  setTimeout(() => { URL.revokeObjectURL(url); a.remove(); }, 1500);
+}
+function dateParts(ms) {
+  const d = new Date(ms);
+  if (isNaN(d)) return ["", ""];
+  return [pad(d.getDate()) + "/" + pad(d.getMonth() + 1) + "/" + d.getFullYear(), pad(d.getHours()) + ":" + pad(d.getMinutes())];
+}
+$("#dlCsv").addEventListener("click", () => {
+  if (!adminData.length) { $("#dlMsg").textContent = "Belum ada ucapan untuk dimuat turun."; return; }
+  const q = v => '"' + String(v == null ? "" : v).replace(/"/g, '""') + '"';
+  const rows = [["Bil", "Tarikh", "Masa", "Nama", "Ucapan", "Kehadiran"].map(q).join(",")];
+  adminData.slice().reverse().forEach((w, i) => {
+    const [dt, tm] = dateParts(w.time);
+    rows.push([i + 1, dt, tm, w.name, w.message, w.attendance || "Tiada jawapan"].map(q).join(","));
+  });
+  saveFile("ucapan-akram-dinie-" + stamp() + ".csv", "\uFEFF" + rows.join("\r\n"), "text/csv;charset=utf-8");
+  $("#dlMsg").textContent = adminData.length + " ucapan dimuat turun (boleh dibuka dengan Excel / Google Sheets).";
+});
+$("#dlTxt").addEventListener("click", () => {
+  if (!adminData.length) { $("#dlMsg").textContent = "Belum ada ucapan untuk dimuat turun."; return; }
+  const c = { "Hadir": 0, "Tidak hadir": 0, "Belum pasti": 0 };
+  adminData.forEach(w => { if (c[w.attendance] !== undefined) c[w.attendance]++; });
+  let t = "UCAPAN & DOA — WALIMATULURUS AKRAM & DINIE\n31 Oktober 2026 · Laman Zulfaqar\n\n";
+  t += "Jumlah ucapan: " + adminData.length + "\nHadir: " + c["Hadir"] + " · Tidak hadir: " + c["Tidak hadir"] + " · Belum pasti: " + c["Belum pasti"] + "\n";
+  t += "Dimuat turun: " + fmtFull(Date.now()) + "\n\n";
+  adminData.slice().reverse().forEach((w, i) => {
+    t += "────────────────────\n" + (i + 1) + ". " + w.name + "  (" + fmtFull(w.time) + ")" + (w.attendance ? " · " + w.attendance : "") + "\n\n" + w.message + "\n\n";
+  });
+  saveFile("ucapan-akram-dinie-" + stamp() + ".txt", "\uFEFF" + t, "text/plain;charset=utf-8");
+  $("#dlMsg").textContent = "Fail teks dimuat turun.";
+});
+
 $("#adminLogout").addEventListener("click", () => {
   try { sessionStorage.removeItem("adminPin"); } catch (e) {}
   adminPin = ""; $("#adminLock").hidden = false; $("#adminBody").hidden = true; $("#adminMsg").textContent = "";
