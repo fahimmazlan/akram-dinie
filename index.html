@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Walimatulurus Akram &amp; Dinie</title>
+<meta name="description" content="Majlis Perkahwinan Muhammad Akram &amp; Nur Dinie · Sabtu, 31 Oktober 2026 · Laman Zulfaqar, 11.00 pagi – 3.00 petang">
+<meta name="theme-color" content="#0A0F2C">
+<!-- WhatsApp preview: if your Vercel link is not akram-dinie.vercel.app, change it in the 2 lines below -->
+<meta property="og:url" content="https://akram-dinie.vercel.app/">
+<meta property="og:image" content="https://akram-dinie.vercel.app/og-image.jpg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Walimatulurus Akram &amp; Dinie">
+<meta property="og:description" content="Sabtu, 31 Oktober 2026 · Laman Zulfaqar · 11.00 pagi – 3.00 petang">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Amiri:wght@400;700&family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+</head>
+<body>
+<style>
+/* Layout: a single invitation card (phone-sized) framed by navy botanicals, content swapped by a bottom tab bar. Single-theme by design (letterpress card). */
+:root{
+  --cream:#FFF1E2;      /* paper */
+  --ink:#0A0F2C;        /* midnight navy — type & darkest petals */
+  --navy:#1B2A6B;       /* mid petals, accents */
+  --sky:#6EA8FE;        /* tiny highlights only */
+  --sand:#E6CBA8;       /* buds, rules, nav */
+  --paper-2:#F7E6D2;    /* inset panels */
+  --muted:#4A4F6A;
+  --f-display:"Cinzel","Trajan Pro",Georgia,serif;
+  --f-body:"Cormorant Garamond",Garamond,Georgia,serif;
+  --f-arab:"Aref Ruqaa","Amiri","Traditional Arabic",serif;
+  --f-quran:"Amiri","Traditional Arabic",serif;
+  --navh:calc(58px + env(safe-area-inset-bottom,0px));
+  color-scheme:light;
+}
+html,body{height:100%}
+body{margin:0;background:var(--ink);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:1.5;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+.stage{height:100%;display:flex;justify-content:center}
+.card{position:relative;width:100%;max-width:460px;height:100%;background:var(--cream);overflow:hidden;box-shadow:0 0 60px rgba(0,0,0,.45)}
+/* paper grain */
+.card::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;
+  background:radial-gradient(circle at 20% 30%,rgba(230,203,168,.35),transparent 55%),radial-gradient(circle at 80% 75%,rgba(230,203,168,.3),transparent 50%)}
+
+/* botanical frame */
+.frame{position:absolute;inset:0 0 var(--navh) 0;pointer-events:none;z-index:0;background:var(--cream) url(bg-floral-tall.webp) center/cover no-repeat}
+.clearing{position:absolute;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 48% 46% at 50% 47%,rgba(255,241,226,.92) 0%,rgba(255,241,226,.78) 55%,rgba(255,241,226,0) 100%)}
+
+/* panels */
+.panels{position:absolute;top:7%;left:0;right:0;bottom:calc(var(--navh) + 9%);-webkit-mask-image:linear-gradient(transparent,#000 26px,#000 calc(100% - 26px),transparent);mask-image:linear-gradient(transparent,#000 26px,#000 calc(100% - 26px),transparent);overflow-y:auto;z-index:1;scroll-behavior:smooth}
+.panel{min-height:100%;padding:34px clamp(42px,12%,60px) 40px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px}
+.panel{text-shadow:0 0 3px var(--cream),0 0 8px var(--cream),0 0 14px var(--cream)}
+.btn,.countdown,.cal,.wish,.chip,.wish-form input,.wish-form textarea,.contact,.nav{text-shadow:none}
+.empty,.form-msg{background:rgba(255,241,226,.9);border-radius:6px;padding:6px 10px}
+.panel h2{font-family:var(--f-display);font-weight:600;font-size:1.05rem;letter-spacing:.28em;margin:0;text-wrap:balance}
+.eyebrow{font-family:var(--f-display);font-size:.72rem;letter-spacing:.32em;color:var(--navy);margin:0}
+.rule{width:120px;height:14px;color:var(--sand)}
+p{margin:0;max-width:34ch}
+
+/* home */
+.home{justify-content:center;gap:12px}
+.majlis{font-family:var(--f-display);font-size:.76rem;letter-spacing:.3em;line-height:1.7;margin:0}
+.mono{font-family:var(--f-arab);font-weight:700;font-size:clamp(92px,28vw,128px);line-height:1;direction:rtl;color:var(--ink);position:relative;margin:4px 0 -6px;
+  text-shadow:0 1px 0 rgba(10,15,44,.08)}
+.mono .dot{position:absolute;width:9px;height:9px;background:var(--sand);transform:rotate(45deg)}
+.arabic-names{font-family:var(--f-arab);font-size:1.25rem;direction:rtl;color:var(--navy);margin:0}
+.names{font-family:var(--f-display);font-weight:400;font-size:clamp(1rem,4.6vw,1.3rem);letter-spacing:.1em;margin:6px 0 0;line-height:1.3}
+.names .amp{font-family:var(--f-body);font-style:italic;letter-spacing:0;font-size:1.2em;color:var(--navy);padding:0 .2em}
+.date-line{font-family:var(--f-display);font-size:.72rem;letter-spacing:.16em;display:flex;gap:.8em;align-items:center}
+.date-line i{width:1px;height:1em;background:var(--ink);display:block}
+.scroll-cue{margin-top:28px;font-size:.85rem;font-style:italic;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:4px;background:none;border:0;cursor:pointer;font-family:var(--f-body)}
+.scroll-cue svg{animation:bob 2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(5px)}}
+
+.invite{padding-top:30px}
+.basmalah{font-family:var(--f-quran);font-size:1.6rem;direction:rtl;margin:0}
+.parents{font-family:var(--f-display);font-size:.88rem;letter-spacing:.08em;line-height:1.8}
+.parents span{display:block;font-family:var(--f-body);font-style:italic;letter-spacing:0;font-size:1rem;color:var(--muted)}
+.couple-full{font-family:var(--f-display);font-size:1.08rem;letter-spacing:.06em;line-height:1.5;font-weight:600}
+.couple-full .and{display:block;font-family:var(--f-arab);font-weight:400;font-size:1.6rem;color:var(--navy);margin:6px 0}
+.details{width:100%;max-width:300px;display:grid;gap:0;border-top:1px solid var(--sand);border-bottom:1px solid var(--sand)}
+.details div{display:grid;grid-template-columns:72px 1fr;text-align:left;padding:11px 0;border-bottom:1px dashed rgba(230,203,168,.9);gap:12px}
+.details div:last-child{border-bottom:0}
+.details dt{font-family:var(--f-display);font-size:.66rem;letter-spacing:.2em;color:var(--navy);padding-top:4px}
+.details dd{margin:0;line-height:1.35}
+.details small{display:block;color:var(--muted);font-style:italic;font-size:.9rem}
+.ayat{font-family:var(--f-quran);direction:rtl;font-size:1.25rem;line-height:2;max-width:32ch;margin:0}
+.ayat-tr{font-style:italic;font-size:.98rem;color:var(--muted)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:0 22px;border-radius:999px;border:1px solid var(--ink);background:var(--ink);color:var(--cream);
+  font-family:var(--f-display);font-size:.72rem;letter-spacing:.2em;text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn:focus-visible,.nav button:focus-visible,input:focus-visible,textarea:focus-visible,.chip:focus-visible{outline:2px solid var(--sky);outline-offset:3px}
+.btn-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+
+/* calendar */
+.cal{width:100%;max-width:320px;background:var(--paper-2);border:1px solid var(--sand);border-radius:6px;padding:16px 14px 12px}
+.cal-head{font-family:var(--f-display);letter-spacing:.24em;font-size:.82rem;margin-bottom:10px}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;font-variant-numeric:tabular-nums}
+.cal-grid .dow{font-family:var(--f-display);font-size:.6rem;letter-spacing:.1em;color:var(--navy);padding-bottom:4px}
+.cal-grid .d{aspect-ratio:1;display:grid;place-items:center;font-size:.95rem;border-radius:50%}
+.cal-grid .d.sat{color:var(--navy)}
+.cal-grid .d.hit{background:var(--ink);color:var(--cream);position:relative;font-weight:600}
+.cal-grid .d.hit::after{content:"";position:absolute;inset:-4px;border:1px solid var(--ink);border-radius:50%}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;width:100%;max-width:320px}
+.countdown div{border:1px solid var(--sand);border-radius:6px;padding:10px 0 8px;background:var(--cream)}
+.countdown b{display:block;font-family:var(--f-display);font-size:1.5rem;font-weight:400;font-variant-numeric:tabular-nums;line-height:1.1}
+.countdown span{font-size:.7rem;letter-spacing:.18em;font-family:var(--f-display);color:var(--navy)}
+
+/* contacts */
+.contacts{display:grid;gap:12px;width:100%;max-width:340px}
+.contact{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;text-align:left;padding:14px 16px;border:1px solid var(--sand);border-radius:6px;background:var(--paper-2)}
+.contact .who{font-family:var(--f-display);font-size:.82rem;letter-spacing:.06em;line-height:1.4}
+.contact .role{font-style:italic;color:var(--muted);font-size:.95rem}
+.contact .num{font-variant-numeric:tabular-nums;font-size:1.05rem;user-select:all}
+.contact .acts{display:flex;gap:6px}
+.icon-btn{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--ink);color:var(--ink);background:transparent;cursor:pointer;text-decoration:none}
+.icon-btn.solid{background:var(--ink);color:var(--cream)}
+.icon-btn svg{width:18px;height:18px}
+
+/* location */
+.venue{font-family:var(--f-display);font-size:1.35rem;letter-spacing:.12em;margin:0}
+.map-art{width:100%;max-width:300px;height:auto}
+
+/* wishes */
+.wish-form{width:100%;max-width:340px;display:grid;gap:10px;text-align:left}
+.wish-form label{font-family:var(--f-display);font-size:.64rem;letter-spacing:.2em;color:var(--navy)}
+.wish-form input,.wish-form textarea{width:100%;font:inherit;font-size:1rem;color:var(--ink);background:var(--cream);border:1px solid var(--sand);border-radius:6px;padding:10px 12px}
+.wish-form textarea{min-height:96px;resize:vertical}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid var(--sand);background:var(--cream);color:var(--ink);border-radius:999px;padding:6px 14px;font:inherit;font-size:.95rem;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--cream)}
+.form-msg{font-style:italic;font-size:.95rem;color:var(--navy);min-height:1.4em;text-align:center}
+.wish-list{width:100%;max-width:340px;display:grid;gap:12px;text-align:left}
+.wish{padding:14px 16px;background:var(--paper-2);border-left:2px solid var(--navy);border-radius:0 6px 6px 0}
+.wish .top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.wish .n{font-family:var(--f-display);font-size:.78rem;letter-spacing:.08em;min-width:0;overflow-wrap:anywhere}
+.wish .t{font-size:.8rem;color:var(--muted);white-space:nowrap}
+.wish .m{margin-top:4px;overflow-wrap:anywhere;white-space:pre-wrap}
+.wish .att{font-size:.75rem;font-family:var(--f-display);letter-spacing:.12em;color:var(--navy);margin-top:6px}
+.empty{font-style:italic;color:var(--muted);text-align:center;padding:10px}
+
+/* bottom nav */
+.nav{position:absolute;left:0;right:0;bottom:0;z-index:5;height:var(--navh);padding:0 6px env(safe-area-inset-bottom,0px);background:var(--ink);border-top:1px solid rgba(230,203,168,.35);display:grid;grid-template-columns:repeat(5,1fr)}
+.nav button{background:none;border:0;color:var(--sand);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer;font-family:var(--f-body);font-size:.72rem;letter-spacing:.02em;border-radius:14px;opacity:.72}
+.nav button svg{width:20px;height:20px}
+.nav button[aria-current="page"]{opacity:1;color:var(--cream)}
+.nav button[aria-current="page"] span{border-bottom:1px solid var(--sand)}
+
+/* cover */
+.cover{position:absolute;inset:0;z-index:10;padding-inline:44px!important;background:var(--ink);color:var(--cream);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;padding:32px;transition:transform .9s cubic-bezier(.7,0,.2,1),opacity .9s}
+.cover.open{transform:translateY(-100%);opacity:.3}
+.cover .mono{color:var(--cream);font-size:clamp(88px,26vw,120px)}
+.cover .names{color:var(--cream)}
+.cover .names .amp{color:var(--sand)}
+.cover .eyebrow{color:var(--sand)}
+.cover .to{font-style:italic;color:var(--sand);font-size:1.05rem}
+.cover .btn{background:var(--cream);color:var(--ink);border-color:var(--cream);margin-top:10px}
+.cover .frame{inset:0;background:var(--ink) url(bg-floral-cover-tall.webp) center/cover no-repeat;opacity:.9}
+.cover > *:not(.frame){position:relative;z-index:1}
+.cover .date-line i{background:var(--cream)}
+
+/* music */
+.music{position:absolute;right:14px;bottom:calc(var(--navh) + 14px);z-index:6;width:44px;height:44px;border-radius:50%;border:1px solid var(--sand);background:var(--ink);color:var(--sand);display:grid;place-items:center;cursor:pointer;box-shadow:0 4px 14px rgba(10,15,44,.3)}
+.music svg{width:20px;height:20px}
+.music .off{display:none}
+.music[aria-pressed="false"] .on{display:none}
+.music[aria-pressed="false"] .off{display:block}
+.music[aria-pressed="true"] svg{animation:spin 6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.music:focus-visible{outline:2px solid var(--sky);outline-offset:3px}
+
+
+/* hosting extras */
+[hidden]{display:none!important}
+img{max-width:100%}
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;width:100%;max-width:320px}
+.tile{border:1px solid var(--sand);border-radius:6px;padding:12px 6px 10px;background:var(--cream);text-shadow:none}
+.tile b{display:block;font-family:var(--f-display);font-size:1.7rem;font-weight:400;font-variant-numeric:tabular-nums;line-height:1.1}
+.tile span{font-size:.66rem;letter-spacing:.16em;font-family:var(--f-display);color:var(--navy)}
+.tile.yes b{color:#1F6B3A}.tile.no b{color:#8A2B2B}
+.wish .att.yes{color:#1F6B3A}.wish .att.no{color:#8A2B2B}
+.admin-form{display:grid;gap:10px;width:100%;max-width:280px}
+.admin-form input{font:inherit;font-size:1.1rem;text-align:center;letter-spacing:.3em;padding:10px 12px;border:1px solid var(--sand);border-radius:6px;background:var(--cream);color:var(--ink)}
+.admin-label{font-family:var(--f-display);font-size:.64rem;letter-spacing:.2em;color:var(--navy);text-align:center}
+.admin-body{display:flex;flex-direction:column;align-items:center;gap:18px;width:100%}
+.admin-meta{font-size:.85rem;color:var(--muted);font-style:italic}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- leaf -->
+    <symbol id="leaf" viewBox="0 -14 80 28">
+      <path d="M0 0C18 -14 48 -14 78 0C48 13 18 13 0 0Z" fill="#1B2A6B"/>
+      <path d="M2 0H74" stroke="#FFF1E2" stroke-width=".9" opacity=".5"/>
+    </symbol>
+    <!-- daisy -->
+    <symbol id="daisy" viewBox="-20 -20 40 40">
+      <g fill="#FFF1E2" stroke="#0A0F2C" stroke-width=".9">
+        <ellipse rx="4" ry="11" cy="-9"/><ellipse rx="4" ry="11" cy="-9" transform="rotate(45)"/><ellipse rx="4" ry="11" cy="-9" transform="rotate(90)"/><ellipse rx="4" ry="11" cy="-9" transform="rotate(135)"/>
+        <ellipse rx="4" ry="11" cy="-9" transform="rotate(180)"/><ellipse rx="4" ry="11" cy="-9" transform="rotate(225)"/><ellipse rx="4" ry="11" cy="-9" transform="rotate(270)"/><ellipse rx="4" ry="11" cy="-9" transform="rotate(315)"/>
+      </g>
+      <circle r="4.5" fill="#E6CBA8" stroke="#0A0F2C" stroke-width=".9"/>
+    </symbol>
+    <symbol id="flourish" viewBox="0 0 120 14"><g fill="none" stroke="currentColor" stroke-width="1"><path d="M2 7H48M72 7H118"/><path d="M60 1L66 7L60 13L54 7Z" fill="currentColor"/><circle cx="50" cy="7" r="1.6" fill="currentColor"/><circle cx="70" cy="7" r="1.6" fill="currentColor"/></g></symbol>
+  </defs>
+</svg>
+
+<div class="stage">
+<main class="card" id="card">
+
+  <!-- Cover -->
+  <section class="cover" id="cover" aria-label="Sampul jemputan">
+    <div class="frame" aria-hidden="true"></div>
+    <p class="eyebrow">WALIMATULURUS</p>
+    <div class="mono" lang="ar">أد</div>
+    <h1 class="names">AKRAM <span class="amp">&amp;</span> DINIE</h1>
+    <div class="date-line"><span>SABTU</span><i></i><span>31 . 10 . 2026</span></div>
+    <p class="to">Kepada tetamu yang dihormati</p>
+    <button class="btn" id="openBtn" type="button">BUKA JEMPUTAN</button>
+  </section>
+  <div class="frame" aria-hidden="true"></div>
+  <div class="clearing" aria-hidden="true"></div>
+
+  <div class="panels" id="panels">
+
+    <!-- UTAMA -->
+    <div class="tabpanel" id="p-utama" data-panel="utama">
+      <section class="panel home">
+        <p class="majlis">MAJLIS<br>PERKAHWINAN</p>
+        <div class="mono" lang="ar" aria-label="Monogram Arab Akram dan Dinie">أد<span class="dot" style="top:18%;right:8%"></span><span class="dot" style="bottom:22%;left:4%"></span></div>
+        <p class="arabic-names" lang="ar">أكرم و ديني</p>
+        <h1 class="names">AKRAM <span class="amp">&amp;</span> DINIE</h1>
+        <div class="date-line"><span>SABTU</span><i></i><span>31 OKTOBER 2026</span></div>
+        <button class="scroll-cue" type="button" id="toInvite">Jemputan
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 6l5 5 5-5"/></svg>
+        </button>
+      </section>
+      <section class="panel invite" id="invite">
+        <p class="basmalah" lang="ar">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+        <p style="font-style:italic">Assalamualaikum w.b.t.</p>
+        <div class="parents">HJ. IR. ABDUL RAZAK BIN MOHAMAD<span>&amp;</span>HJH. SALBIAH BINTI MOHAMED MUHAIYIDDIN</div>
+        <svg class="rule" aria-hidden="true"><use href="#flourish"/></svg>
+        <p>Sebesar kasih dan setulus hati, kami menjemput<br><em>Dato' / Datin / Tuan / Puan / Encik / Cik</em><br>ke Majlis Perkahwinan putera kami</p>
+        <div class="couple-full">MUHAMMAD AKRAM<br>BIN ABDUL RAZAK<span class="and" lang="ar">و</span>NUR DINIE<br>BINTI MD ANUAR</div>
+        <svg class="rule" aria-hidden="true"><use href="#flourish"/></svg>
+        <dl class="details">
+          <div><dt>TARIKH</dt><dd>Sabtu, 31 Oktober 2026<small>20 Jamadilawal 1448H</small></dd></div>
+          <div><dt>MASA</dt><dd>11.00 pagi – 3.00 petang</dd></div>
+          <div><dt>TEMPAT</dt><dd>Laman Zulfaqar</dd></div>
+        </dl>
+        <div class="btn-row">
+          <button class="btn" type="button" data-go="lokasi">LOKASI</button>
+          <button class="btn ghost" type="button" data-go="ucapan">TULIS UCAPAN</button>
+        </div>
+        <svg class="rule" aria-hidden="true"><use href="#flourish"/></svg>
+        <p class="ayat" lang="ar">وَمِنْ ءَايَٰتِهِۦٓ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًا لِّتَسْكُنُوٓا۟ إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</p>
+        <p class="ayat-tr">“Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan dari jenismu sendiri, supaya kamu merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang.”<br>— Surah Ar-Rum, 30:21</p>
+      </section>
+    </div>
+
+    <!-- KALENDAR -->
+    <div class="tabpanel" id="p-kalendar" data-panel="kalendar" hidden>
+      <section class="panel">
+        <p class="eyebrow">SIMPAN TARIKH</p>
+        <h2>KALENDAR</h2>
+        <svg class="rule" aria-hidden="true"><use href="#flourish"/></svg>
+        <div class="cal">
+          <div class="cal-head">OKTOBER 2026</div>
+          <div class="cal-grid" id="calGrid"></div>
+        </div>
+        <p style="font-style:italic">Sabtu, 31 Oktober 2026 · 20 Jamadilawal 1448H<br>11.00 pagi – 3.00 petang</p>
+        <div class="countdown" id="countdown" aria-live="off">
+          <div><b id="cd-d">--</b><span>HARI</span></div>
+          <div><b id="cd-h">--</b><span>JAM</span></div>
+          <div><b id="cd-m">--</b><span>MINIT</span></div>
+          <div><b id="cd-s">--</b><span>SAAT</span></div>
+        </div>
+        <a class="btn" id="gcal" target="_blank" rel="noopener">SIMPAN KE GOOGLE CALENDAR</a>
+      </section>
+    </div>
+
+    <!-- HUBUNGI -->
+    <div class="tabpanel" id="p-hubungi" data-panel="hubungi" hidden>
+      <section class="panel">
+        <p class="eyebrow">UNTUK SEBARANG PERTANYAAN</p>
+        <h2>HUBUNGI</h2>
+        <svg class="rule" aria-hidden="true"><use href="#flourish"/></svg>
+        <div class="contacts" id="contacts"></div>
+        <p style="font-size:.9rem;color:var(--muted);font-style:italic">Tekan nombor untuk menyalin.</p>
+      </section>
+    </div>
+
+    <!-- LOKASI -->
+    <div class="tabpanel" id="p-lokasi" data-panel="lokasi" hidden>
+      <section class="panel">
+        <p class="eyebrow">TEMPAT MAJLIS</p>
+        <h2>LOKASI</h2>
+        <svg class="rule" aria-hidden="true"><use href="#flourish"/></svg>
+        <svg class="map-art" viewBox="0 0 300 170" aria-hidden="true">
+          <rect x="1" y="1" width="298" height="168" rx="6" fill="#F7E6D2" stroke="#E6CBA8"/>
+          <g stroke="#E6CBA8" stroke-width="10" fill="none" stroke-linecap="round"><path d="M-10 120C60 110 110 60 180 70S280 40 320 30"/><path d="M90 -10C100 50 120 110 110 180"/></g>
+          <g stroke="#FFF1E2" stroke-width="2" fill="none" stroke-dasharray="6 6"><path d="M-10 120C60 110 110 60 180 70S280 40 320 30"/></g>
+          <use href="#daisy" x="30" y="20" width="18" height="18"/><use href="#daisy" x="240" y="110" width="22" height="22"/>
+          <use href="#leaf" x="0" y="0" width="40" height="14" transform="translate(200 130) rotate(-20)"/>
+          <g transform="translate(170 22)"><path d="M18 0C8 0 0 8 0 18C0 32 18 48 18 48S36 32 36 18C36 8 28 0 18 0Z" fill="#0A0F2C"/><circle cx="18" cy="18" r="7" fill="#FFF1E2"/></g>
+        </svg>
+        <p class="venue">LAMAN ZULFAQAR</p>
+        <p style="font-style:italic">Sabtu, 31 Oktober 2026 · 11.00 pagi – 3.00 petang</p>
+        <div class="btn-row">
+          <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Laman+Zulfaqar">GOOGLE MAPS</a>
+          <a class="btn ghost" target="_blank" rel="noopener" href="https://waze.com/ul?q=Laman%20Zulfaqar&amp;navigate=yes">WAZE</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- UCAPAN -->
+    <div class="tabpanel" id="p-ucapan" data-panel="ucapan" hidden>
+      <section class="panel">
+        <p class="eyebrow">DOA &amp; UCAPAN</p>
+        <h2>UCAPAN</h2>
+        <svg class="rule" aria-hidden="true"><use href="#flourish"/></svg>
+        <p style="font-style:italic">Titipkan doa dan ucapan buat Akram &amp; Dinie.</p>
+        <form class="wish-form" id="wishForm" novalidate>
+          <label for="wName">NAMA</label>
+          <input id="wName" name="name" maxlength="60" autocomplete="name" placeholder="Nama anda">
+          <input id="wWeb" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label for="wMsg">UCAPAN</label>
+          <textarea id="wMsg" name="message" maxlength="500" placeholder="Selamat pengantin baru…"></textarea>
+          <label>KEHADIRAN</label>
+          <div class="chips" role="group" aria-label="Kehadiran">
+            <button type="button" class="chip" data-att="Hadir" aria-pressed="false">Hadir</button>
+            <button type="button" class="chip" data-att="Tidak hadir" aria-pressed="false">Tidak hadir</button>
+            <button type="button" class="chip" data-att="Belum pasti" aria-pressed="false">Belum pasti</button>
+          </div>
+          <button class="btn" type="submit" id="wSubmit" style="margin-top:6px">HANTAR UCAPAN</button>
+          <div class="form-msg" id="formMsg" role="status"></div>
+        </form>
+        <div class="wish-list" id="wishList"><div class="empty">Ucapan tetamu akan dipaparkan di sini. Jadilah yang pertama.</div></div>
+      </section>
+    </div>
+
+    <!-- RUANG PENGANTIN (private: open the link ending with #pengantin) -->
+    <div class="tabpanel" id="p-pengantin" data-panel="pengantin" hidden>
+      <section class="panel">
+        <p class="eyebrow">UNTUK PENGANTIN SAHAJA</p>
+        <h2>RUANG PENGANTIN</h2>
+        <svg class="rule" aria-hidden="true"><use href="#flourish"/></svg>
+        <form class="admin-form" id="adminLock" novalidate>
+          <label class="admin-label" for="adminPin">MASUKKAN PIN</label>
+          <input id="adminPin" type="password" inputmode="numeric" autocomplete="off" maxlength="20">
+          <button class="btn" type="submit">BUKA</button>
+        </form>
+        <div class="form-msg" id="adminMsg" role="status"></div>
+        <div class="admin-body" id="adminBody" hidden>
+          <div class="tiles">
+            <div class="tile yes"><b id="cHadir">0</b><span>HADIR</span></div>
+            <div class="tile no"><b id="cTidak">0</b><span>TIDAK HADIR</span></div>
+            <div class="tile"><b id="cBelum">0</b><span>BELUM PASTI</span></div>
+            <div class="tile"><b id="cJumlah">0</b><span>JUMLAH UCAPAN</span></div>
+          </div>
+          <p class="admin-meta" id="adminUpdated"></p>
+          <div class="btn-row">
+            <button class="btn" type="button" id="adminRefresh">MUAT SEMULA</button>
+            <button class="btn ghost" type="button" id="adminLogout">KUNCI</button>
+          </div>
+          <div class="wish-list" id="adminList"></div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <audio id="bgm" src="song.mp3" loop preload="none"></audio>
+  <button class="music" id="musicBtn" type="button" aria-pressed="false" aria-label="Main atau henti lagu">
+    <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.2" fill="currentColor"/><path d="M12 3a9 9 0 0 1 9 9" stroke-dasharray="2 3"/></svg>
+    <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></svg>
+  </button>
+
+  <nav class="nav" aria-label="Menu jemputan">
+    <button type="button" data-tab="utama" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 11l8-7 8 7v9H4z"/><path d="M10 20v-5h4v5"/></svg><span>Utama</span></button>
+    <button type="button" data-tab="kalendar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/><circle cx="15.5" cy="15" r="1.4" fill="currentColor"/></svg><span>Kalendar</span></button>
+    <button type="button" data-tab="hubungi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 3.5h3l1.5 4-2 1.5a11 11 0 0 0 6.5 6.5l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4 5.5a2 2 0 0 1 2-2z"/></svg><span>Hubungi</span></button>
+    <button type="button" data-tab="lokasi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><span>Lokasi</span></button>
+    <button type="button" data-tab="ucapan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg><span>Ucapan</span></button>
+  </nav>
+</main>
+</div>
+
+<script>
+/* ===================== SETTINGS ===================== */
+/* 1) Paste your Google Apps Script Web app URL here (ends with /exec) */
+const SHEET_API = "https://script.google.com/macros/s/AKfycby54jzInx_bNO03pDK8mrBQJ6MOxp3wSyPdZWRsEFw2dutGnY7mWnelTEtc_BLRfDvMmw/exec";
+
+/* 2) Contact numbers, e.g. "012-345 6789" (leave "" if none) */
+const CONTACTS = [
+  { name: "Hj. Ir. Abdul Razak", role: "Bapa", phone: "" },
+  { name: "Hjh. Salbiah", role: "Ibu", phone: "" },
+  { name: "Muhammad Akram", role: "Pengantin lelaki", phone: "" }
+];
+const EVENT = { start: "2026-10-31T11:00:00+08:00", gStart: "20261031T030000Z", gEnd: "20261031T070000Z", venue: "Laman Zulfaqar" };
+
+const $ = s => document.querySelector(s);
+
+/* auto-scroll: glide from the monogram down to the couple's names, then stop */
+let autoRaf = 0, autoTimer = 0;
+function stopAuto() { cancelAnimationFrame(autoRaf); clearTimeout(autoTimer); autoRaf = 0; $("#panels").style.scrollBehavior = ""; }
+function autoScroll(delay) {
+  stopAuto();
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  autoTimer = setTimeout(() => {
+    const box = $("#panels"), target = $(".couple-full");
+    if (!box || !target || $("#p-utama").hidden) return;
+    const to = Math.max(0, target.getBoundingClientRect().top - box.getBoundingClientRect().top + box.scrollTop - 10);
+    const from = box.scrollTop, dist = to - from;
+    if (dist <= 4) return;
+    const dur = 21000;  // about 21 seconds from top to the couple's names
+    const ease = t => t < .5 ? 2*t*t : 1 - Math.pow(-2*t + 2, 2)/2;
+    box.style.scrollBehavior = "auto";
+    const t0 = performance.now();
+    const step = now => {
+      const k = Math.min(1, (now - t0) / dur);
+      box.scrollTop = from + dist * ease(k);
+      if (k < 1) autoRaf = requestAnimationFrame(step); else stopAuto();
+    };
+    autoRaf = requestAnimationFrame(step);
+  }, delay);
+}
+["wheel","touchstart","pointerdown","keydown"].forEach(ev => $("#panels").addEventListener(ev, stopAuto, { passive: true }));
+
+/* background music */
+const bgm = $("#bgm"), mBtn = $("#musicBtn");
+let wantMusic = true, fadeT = 0;
+const setBtn = on => mBtn.setAttribute("aria-pressed", String(on));
+function playMusic() {
+  try { bgm.volume = 0; } catch (e) {}
+  const pr = bgm.play();
+  if (pr && pr.then) pr.then(() => {
+    setBtn(true); clearInterval(fadeT);
+    fadeT = setInterval(() => { bgm.volume = Math.min(.7, bgm.volume + .05); if (bgm.volume >= .7) clearInterval(fadeT); }, 150);
+  }).catch(() => setBtn(false));
+}
+function pauseMusic() { clearInterval(fadeT); bgm.pause(); setBtn(false); }
+mBtn.addEventListener("click", () => { if (bgm.paused) { wantMusic = true; playMusic(); } else { wantMusic = false; pauseMusic(); } });
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) { if (!bgm.paused) { bgm.pause(); setBtn(false); } }
+  else if (wantMusic && bgm.currentTime > 0) playMusic();
+});
+/* if the cover was already opened this visit, start on the guest's first tap */
+function firstTap(ev) { document.removeEventListener("pointerdown", firstTap, true); if (ev.target.closest && ev.target.closest("#musicBtn")) return; if (location.hash === "#pengantin") return; if (wantMusic && bgm.paused) playMusic(); }
+
+/* cover */
+$("#openBtn").addEventListener("click", () => {
+  $("#cover").classList.add("open");
+  setTimeout(() => { $("#cover").hidden = true; }, 950);
+  try { sessionStorage.setItem("opened", "1"); } catch (e) {}
+  autoScroll(2200);
+  playMusic();
+});
+try { if (sessionStorage.getItem("opened")) { $("#cover").hidden = true; autoScroll(1500); document.addEventListener("pointerdown", firstTap, true); } } catch (e) {}
+
+/* tabs */
+const TABS = ["utama","kalendar","hubungi","lokasi","ucapan","pengantin"];
+var wishesReady = false;
+function show(tab) {
+  if (!TABS.includes(tab)) tab = "utama";
+  stopAuto();
+  document.querySelectorAll(".tabpanel").forEach(p => p.hidden = p.dataset.panel !== tab);
+  document.querySelectorAll(".nav button").forEach(b => { if (b.dataset.tab === tab) b.setAttribute("aria-current","page"); else b.removeAttribute("aria-current"); });
+  $("#panels").scrollTop = 0;
+  if (wishesReady) onTab(tab);
+}
+document.querySelectorAll(".nav button").forEach(b => b.addEventListener("click", () => show(b.dataset.tab)));
+document.querySelectorAll("[data-go]").forEach(b => b.addEventListener("click", () => show(b.dataset.go)));
+$("#toInvite").addEventListener("click", () => $("#invite").scrollIntoView({ behavior: "smooth" }));
+const h = location.hash.replace("#","");
+if (TABS.includes(h)) { show(h); $("#cover").hidden = true; }
+addEventListener("hashchange", () => { const t = location.hash.replace("#",""); if (TABS.includes(t)) { $("#cover").hidden = true; show(t); } });
+
+/* calendar */
+(function () {
+  const g = $("#calGrid");
+  ["AHD","ISN","SEL","RAB","KHA","JUM","SAB"].forEach(d => { const e = document.createElement("div"); e.className = "dow"; e.textContent = d; g.appendChild(e); });
+  const first = new Date(2026, 9, 1).getDay();
+  for (let i = 0; i < first; i++) g.appendChild(document.createElement("div"));
+  for (let d = 1; d <= 31; d++) {
+    const e = document.createElement("div");
+    const dow = (first + d - 1) % 7;
+    e.className = "d" + (dow === 6 ? " sat" : "") + (d === 31 ? " hit" : "");
+    e.textContent = d;
+    if (d === 31) e.setAttribute("aria-label", "31 Oktober, hari majlis");
+    g.appendChild(e);
+  }
+})();
+
+/* countdown */
+const target = new Date(EVENT.start).getTime();
+const pad = n => String(n).padStart(2, "0");
+function tick() {
+  let s = Math.max(0, Math.floor((target - Date.now()) / 1000));
+  const d = Math.floor(s / 86400); s %= 86400;
+  $("#cd-d").textContent = d; $("#cd-h").textContent = pad(Math.floor(s / 3600));
+  $("#cd-m").textContent = pad(Math.floor(s % 3600 / 60)); $("#cd-s").textContent = pad(s % 60);
+}
+tick(); setInterval(tick, 1000);
+$("#gcal").href = "https://calendar.google.com/calendar/render?action=TEMPLATE"
+  + "&text=" + encodeURIComponent("Majlis Perkahwinan Akram & Dinie")
+  + "&dates=" + EVENT.gStart + "/" + EVENT.gEnd
+  + "&details=" + encodeURIComponent("Majlis Perkahwinan Muhammad Akram bin Abdul Razak & Nur Dinie binti Md Anuar. 20 Jamadilawal 1448H.")
+  + "&location=" + encodeURIComponent(EVENT.venue) + "&ctz=Asia/Kuala_Lumpur";
+
+/* contacts */
+(function () {
+  const wrap = $("#contacts");
+  CONTACTS.forEach(c => {
+    const row = document.createElement("div"); row.className = "contact";
+    const info = document.createElement("div");
+    const who = document.createElement("div"); who.className = "who"; who.textContent = c.name;
+    const role = document.createElement("div"); role.className = "role"; role.textContent = c.role;
+    const num = document.createElement("div"); num.className = "num"; num.textContent = c.phone || "Nombor akan dikemas kini";
+    info.append(who, role, num);
+    const acts = document.createElement("div"); acts.className = "acts";
+    if (c.phone) {
+      const intl = c.phone.replace(/\D/g, "").replace(/^0/, "60");
+      const wa = document.createElement("a"); wa.className = "icon-btn solid"; wa.href = "https://wa.me/" + intl; wa.target = "_blank"; wa.rel = "noopener"; wa.setAttribute("aria-label", "WhatsApp " + c.name);
+      wa.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 1a4 4 0 0 1-2-2l1-1-1-2z"/></svg>';
+      const cp = document.createElement("button"); cp.type = "button"; cp.className = "icon-btn"; cp.setAttribute("aria-label", "Salin nombor " + c.name);
+      cp.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg>';
+      cp.addEventListener("click", () => {
+        navigator.clipboard.writeText(c.phone).then(() => { num.textContent = "Disalin: " + c.phone; setTimeout(() => num.textContent = c.phone, 1600); })
+          .catch(() => { const r = document.createRange(); r.selectNodeContents(num); const s = getSelection(); s.removeAllRanges(); s.addRange(r); });
+      });
+      acts.append(wa, cp);
+    }
+    row.append(info, acts); wrap.appendChild(row);
+  });
+})();
+
+/* ===== Ucapan (wishes) — stored in Google Sheet via Apps Script ===== */
+let att = "";
+document.querySelectorAll(".chip").forEach(c => c.addEventListener("click", () => {
+  att = c.getAttribute("aria-pressed") === "true" ? "" : c.dataset.att;
+  document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", String(x.dataset.att === att)));
+}));
+const MONTHS = ["Jan","Feb","Mac","Apr","Mei","Jun","Jul","Ogo","Sep","Okt","Nov","Dis"];
+const fmt = ms => { const d = new Date(ms); return isNaN(d) ? "" : d.getDate() + " " + MONTHS[d.getMonth()] + " " + d.getFullYear(); };
+const fmtFull = ms => { const d = new Date(ms); return isNaN(d) ? "" : fmt(ms) + ", " + pad(d.getHours()) + ":" + pad(d.getMinutes()); };
+const API_READY = /^https:\/\/script\.google\.com\/macros\/s\//.test(SHEET_API);
+
+function wishCard(w, withAtt) {
+  const el = document.createElement("article"); el.className = "wish";
+  const top = document.createElement("div"); top.className = "top";
+  const n = document.createElement("span"); n.className = "n"; n.textContent = String(w.name || "Tetamu").slice(0, 60);
+  const t = document.createElement("span"); t.className = "t"; t.textContent = withAtt ? fmtFull(w.time) : fmt(w.time);
+  top.append(n, t);
+  const m = document.createElement("div"); m.className = "m"; m.textContent = String(w.message || "").slice(0, 500);
+  el.append(top, m);
+  if (withAtt) {
+    const a = document.createElement("div"); a.className = "att " + (w.attendance === "Hadir" ? "yes" : w.attendance === "Tidak hadir" ? "no" : "");
+    a.textContent = (w.attendance || "Tiada jawapan kehadiran").toUpperCase(); el.appendChild(a);
+  }
+  return el;
+}
+function renderList(box, items, withAtt, emptyText) {
+  box.textContent = "";
+  if (!items.length) { const e = document.createElement("div"); e.className = "empty"; e.textContent = emptyText; box.appendChild(e); return; }
+  items.forEach(w => box.appendChild(wishCard(w, withAtt)));
+}
+
+/* public list */
+let loadingWishes = false;
+async function loadWishes() {
+  if (!API_READY || loadingWishes) return;
+  loadingWishes = true;
+  try {
+    const r = await fetch(SHEET_API + "?action=list", { cache: "no-store" });
+    const d = await r.json();
+    if (d.ok) renderList($("#wishList"), d.wishes || [], false, "Ucapan tetamu akan dipaparkan di sini. Jadilah yang pertama.");
+  } catch (e) {
+    renderList($("#wishList"), [], false, "Ucapan tidak dapat dimuatkan sekarang. Cuba sebentar lagi.");
+  } finally { loadingWishes = false; }
+}
+
+/* submit */
+(function () {
+  const msg = $("#formMsg"), btn = $("#wSubmit");
+  if (!API_READY) { msg.textContent = "Ruang ucapan belum dibuka. Sila cuba sebentar lagi."; btn.disabled = true; return; }
+  $("#wishForm").addEventListener("submit", async ev => {
+    ev.preventDefault();
+    const name = $("#wName").value.trim(), message = $("#wMsg").value.trim();
+    if (!name || !message) { msg.textContent = "Sila isi nama dan ucapan anda."; return; }
+    if (!att) { msg.textContent = "Sila pilih kehadiran anda."; return; }
+    btn.disabled = true; msg.textContent = "Menghantar…";
+    try {
+      const r = await fetch(SHEET_API, { method: "POST", body: JSON.stringify({ action: "add", name, message, attendance: att, website: $("#wWeb").value }) });
+      const d = await r.json();
+      if (!d.ok) throw new Error(d.error || "fail");
+      msg.textContent = "Terima kasih! Ucapan anda telah dihantar.";
+      $("#wMsg").value = "";
+      try { localStorage.setItem("wishName", name); } catch (e) {}
+      loadWishes();
+    } catch (e) {
+      msg.textContent = "Ucapan tidak dapat dihantar. Semak sambungan internet dan cuba lagi.";
+    } finally { btn.disabled = false; }
+  });
+  try { const n = localStorage.getItem("wishName"); if (n) $("#wName").value = n; } catch (e) {}
+})();
+
+/* refresh the list when the Ucapan tab is open */
+var wishTimer = 0;
+function onTab(tab) {
+  clearInterval(wishTimer);
+  if (tab === "ucapan") { loadWishes(); wishTimer = setInterval(loadWishes, 60000); }
+  if (tab === "pengantin") adminInit();
+}
+
+/* ===== Ruang Pengantin (#pengantin) — PIN-protected guest list ===== */
+var adminPin = "";
+function adminInit() {
+  try { adminPin = sessionStorage.getItem("adminPin") || ""; } catch (e) {}
+  if (adminPin) adminLoad(); else { $("#adminLock").hidden = false; $("#adminBody").hidden = true; }
+}
+async function adminLoad() {
+  const m = $("#adminMsg");
+  if (!API_READY) { m.textContent = "Google Sheet belum disambungkan (SHEET_API kosong)."; return; }
+  m.textContent = "Memuatkan…";
+  try {
+    const r = await fetch(SHEET_API, { method: "POST", body: JSON.stringify({ action: "admin", pin: adminPin }) });
+    const d = await r.json();
+    if (!d.ok) {
+      try { sessionStorage.removeItem("adminPin"); } catch (e) {}
+      adminPin = ""; $("#adminLock").hidden = false; $("#adminBody").hidden = true;
+      m.textContent = d.error === "pin" ? "PIN salah. Cuba lagi." : "Tidak dapat memuatkan data.";
+      return;
+    }
+    $("#adminLock").hidden = true; $("#adminBody").hidden = false; m.textContent = "";
+    $("#cHadir").textContent = d.counts["Hadir"] || 0;
+    $("#cTidak").textContent = d.counts["Tidak hadir"] || 0;
+    $("#cBelum").textContent = d.counts["Belum pasti"] || 0;
+    $("#cJumlah").textContent = d.total || 0;
+    $("#adminUpdated").textContent = "Dikemas kini " + fmtFull(Date.now());
+    renderList($("#adminList"), d.wishes || [], true, "Belum ada ucapan.");
+  } catch (e) { m.textContent = "Tidak dapat memuatkan data. Semak sambungan internet."; }
+}
+$("#adminLock").addEventListener("submit", ev => {
+  ev.preventDefault();
+  adminPin = $("#adminPin").value.trim();
+  if (!adminPin) return;
+  try { sessionStorage.setItem("adminPin", adminPin); } catch (e) {}
+  $("#adminPin").value = "";
+  adminLoad();
+});
+$("#adminRefresh").addEventListener("click", adminLoad);
+$("#adminLogout").addEventListener("click", () => {
+  try { sessionStorage.removeItem("adminPin"); } catch (e) {}
+  adminPin = ""; $("#adminLock").hidden = false; $("#adminBody").hidden = true; $("#adminMsg").textContent = "";
+});
+
+wishesReady = true;
+/* start */
+const startTab = location.hash.replace("#", "");
+if (startTab === "ucapan" || startTab === "pengantin") onTab(startTab);
+</script>
+
+</body>
+</html>
